@@ -16,7 +16,6 @@ if "Staten Island" not in tiécar_options:
 
 tiécar = st.selectbox("Indiquez votre arrondissement de récupération", tiécar_options)
 
-st.write(f"Tu as choisi : {tiécar}")
 
 
 images = {
