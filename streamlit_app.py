@@ -13,7 +13,7 @@ tiécar_options = sorted(set(tiécar_options))  # suppression des doublons et tr
 
 
 if "Staten Island" not in tiécar_options:
-    tiécar_options.append("Staten Island
+    tiécar_options.append("Staten Island")
 if "NaN" not in tiécar_options:
     tiécar_options.append("NaN")
 
