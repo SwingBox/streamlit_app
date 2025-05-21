@@ -22,6 +22,6 @@ images = {
 }
 
 if tiécar in images:
-    st.image(images[tiécar], use_column_width=True)
+    st.image(images[tiécar], use_container_width=True)
 else:
     st.image("https://fr.web.img6.acsta.net/c_310_420/pictures/23/09/01/18/03/4245127.jpg")
