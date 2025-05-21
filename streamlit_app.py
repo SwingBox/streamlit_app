@@ -1,4 +1,3 @@
-#import streamlit as st
 import pandas as pd
 import streamlit as st
 
@@ -7,15 +6,13 @@ df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/
 
 st.title("Bienvenue sur le site de Nathan")
 
-
-tiécar_options = pd.concat([df['pickup_borough'], df['dropoff_borough']]).dropna().unique()
+df = df.fillna("NaN")
+tiécar_options = pd.concat([df['pickup_borough'], df['dropoff_borough']]).unique()
 tiécar_options = sorted(set(tiécar_options))  # suppression des doublons et tri
 
 
 if "Staten Island" not in tiécar_options:
     tiécar_options.append("Staten Island")
-if "NaN" not in tiécar_options:
-    tiécar_options.append("NaN")
 
 tiécar = st.selectbox("Indiquez votre arrondissement de récupération", tiécar_options)
 
