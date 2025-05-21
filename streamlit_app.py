@@ -8,7 +8,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/
 st.title("Bienvenue sur le site de Nathan")
 
 
-tiécar_options = pd.concat([df['pickup_borough'], df['dropoff_borough']]).unique()
+tiécar_options = pd.concat([df['pickup_borough'], df['dropoff_borough']])dropna().unique()
 tiécar_options = sorted(set(tiécar_options))  # suppression des doublons et tri
 
 
