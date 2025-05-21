@@ -8,7 +8,7 @@ st.title("Bienvenue sur le site de Nathan")
 
 df = df.fillna("NaN")
 tiécar_options = pd.concat([df['pickup_borough'], df['dropoff_borough']]).unique()
-tiécar_options = sorted(set(tiécar_options))  # suppression des doublons et tri
+tiécar_options = set(tiécar_options)
 
 
 if "Staten Island" not in tiécar_options:
